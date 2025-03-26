@@ -1,0 +1,26 @@
+步骤 3：运行测试
+安装Python依赖：
+
+bash
+复制
+pip install docker
+执行Python脚本：
+
+bash
+复制
+python code_runner.py
+功能说明
+支持语言： Python、Java、Golang、C、C++、JavaScript。
+
+安全隔离： 使用Docker容器隔离代码执行环境，限制内存(100MB)和CPU使用。
+
+超时处理： 所有代码最多运行10秒，超时自动终止。
+
+错误处理： 捕获编译和运行时错误，返回清晰错误信息。
+
+注意事项
+Java代码： 必须包含 public class Main 且文件名必须为 Main.java。
+
+资源限制： 可根据需求调整 mem_limit 和 cpu 参数。
+
+Docker镜像： 确保构建镜像时网络畅通，以便正确安装依赖。
